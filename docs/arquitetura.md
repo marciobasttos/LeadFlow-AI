@@ -74,7 +74,7 @@ A tabela principal da primeira versão do projeto é:
 
 O fluxo inicial do LeadFlow AI segue a seguinte arquitetura:
 
-
+```text
 ┌──────────────────────┐
 │   Formulário / API   │
 │      / Sistema       │
