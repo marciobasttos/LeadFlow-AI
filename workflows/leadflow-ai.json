@@ -15,7 +15,7 @@
       ],
       "id": "86225978-4a57-4ec4-b1ee-1bab371536e0",
       "name": "Webhook",
-      "webhookId": "c54dea99-cc67-43bb-8917-543a6c144cbd"
+      "webhookId": ""
     },
     {
       "parameters": {
@@ -112,7 +112,7 @@
       "name": "Insert rows in a table",
       "credentials": {
         "postgres": {
-          "id": "uWeq1kARqB7D77OB",
+          "id": "",
           "name": "Postgres account"
         }
       }
@@ -503,7 +503,7 @@
   "versionId": "50ccaf97-c0be-45a8-ac6b-a952271f22e1",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "673956715ec3760f35ea45584753b025b3b5934dd19749dcec3b4eb69e61d5fb"
+    "instanceId": ""
   },
   "nodeGroups": [],
   "id": "asO0bjf3r3xThLPg",
