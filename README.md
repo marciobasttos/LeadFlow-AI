@@ -34,7 +34,7 @@ O LeadFlow AI recebe os dados de um lead através de um Webhook e verifica se o 
 
 Quando o e-mail não existe:
 
-Webhook → SELECT → IF → INSERT
+`Webhook → SELECT → IF → INSERT`
 
 O lead é cadastrado na tabela `leads`.
 
@@ -42,7 +42,7 @@ O lead é cadastrado na tabela `leads`.
 
 Quando o e-mail já existe:
 
-Webhook → SELECT → IF → Code → INSERT lead_history → UPDATE
+`Webhook → SELECT → IF → Code → INSERT lead_history → UPDATE`
 
 O sistema compara os dados recebidos com os dados armazenados.
 
@@ -90,19 +90,43 @@ Principais campos:
 
 A coluna `lead_id` estabelece o relacionamento entre o histórico e o lead original por meio de uma chave estrangeira (`FOREIGN KEY`).
 
-## Status
+## Testes Realizados
 
-🚧 v0.1
-Cadastro de leads
-      ↓
-v0.2
-Prevenção de duplicidade
-      ↓
-v0.3
-Atualização automática
-      ↓
-v0.4
-Histórico de alterações
+O fluxo foi validado através de diferentes cenários:
+
+- Cadastro de um novo lead
+- Tentativa de cadastro duplicado
+- Reenvio de dados sem alterações
+- Alteração de um único campo
+- Registro da alteração na tabela `lead_history`
+- Atualização do registro original na tabela `leads`
+- Validação do relacionamento entre `leads` e `lead_history`
+
+Os testes confirmaram o funcionamento esperado do fluxo de cadastro, atualização e histórico de alterações.
+
+## Status do Projeto
+
+### v0.1 — Cadastro de Leads
+
+Implementação do recebimento de leads via Webhook e cadastro no banco de dados.
+
+↓
+
+### v0.2 — Prevenção de Duplicidade
+
+Identificação de leads existentes através do endereço de e-mail.
+
+↓
+
+### v0.3 — Atualização Automática
+
+Atualização dos dados do lead existente através do seu `id`.
+
+↓
+
+### v0.4 — Histórico de Alterações
+
+Implementação da comparação entre dados antigos e novos, registro das alterações na tabela `lead_history` e armazenamento dos valores anterior e novo.
 
 ---
 
